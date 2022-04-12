@@ -21,7 +21,7 @@ To deploy this project run
 
 After executing the program you will be able to try the following and more:
 
-![exemple](/simple_shell/assets/shell.png?raw=true "")
+![exemple](/assets/shell.png?raw=true "")
 
 ## Features
 
