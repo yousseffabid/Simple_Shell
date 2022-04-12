@@ -21,7 +21,7 @@ To deploy this project run
 
 After executing the program you will be able to try the following and more:
 
-![](/shell_draft/assets/shell.png?raw=true "")
+![exemple](/assets/shell.png?raw=true "")
 
 ## Features
 
@@ -34,7 +34,7 @@ After executing the program you will be able to try the following and more:
 
 How our shell is working
 
-![](/shell_draft/assets/Flowchart.png?raw=true "")
+![flowchart](/assets/Flowchart.jpg)
 
 ## Authors
 
