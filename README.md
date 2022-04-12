@@ -34,7 +34,7 @@ After executing the program you will be able to try the following and more:
 
 How our shell is working
 
-![flowchart](/simple_shell/blob/main/assets/Flowchart.jpg)
+![flowchart](/assets/Flowchart.jpg)
 
 ## Authors
 
