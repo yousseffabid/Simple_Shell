@@ -14,6 +14,8 @@ void exec_cmd(char **tokens, char **argv, path *list_env, char **parsed_path)
 	int status;
 	char *tmp;
 
+	if (tokens[0] == NULL)
+		return;
 	if (check_builtin(tokens, list_env) != 1)
 	{
 		tmp = tokens[0];
@@ -24,12 +26,13 @@ void exec_cmd(char **tokens, char **argv, path *list_env, char **parsed_path)
 			if (id_child < 0)
 			{
 				perror("Error forking");
+				free(tokens[0]);
 				return;
 			}
 			if (id_child == 0)
 			{
-				execve(tokens[0], tokens, environ);
-				/*	print_error(argv, tmp);*/
+				if (execve(tokens[0], tokens, environ) == -1)
+					return;
 			}
 			else
 			{

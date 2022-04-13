@@ -32,7 +32,7 @@ char **tokenize(char *input, char *delimiter)
 		}
 		token = _strtok(NULL, delimiter);
 	}
-	tokens[i + 1] = NULL;
+	tokens[i] = NULL;
 
 return (tokens);
 }
