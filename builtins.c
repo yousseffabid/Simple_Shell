@@ -11,10 +11,13 @@ void exit_program(char **tokens, path *list_env)
 	int status;
 
 	status = 0;
+	if (tokens[1] != NULL && tokens[2] != NULL)
+		_puts("failed: command synta");
 	if (tokens[1] != NULL)
 		status = _atoi(tokens[1]);
 	free_list(list_env);
 	free(tokens);
+
 	exit(status);
 
 }
@@ -29,16 +32,17 @@ void exit_program(char **tokens, path *list_env)
 
 void _env(char **tokens, path *list_env)
 {
-	int i;
 
-	i = 0;
-	(void)tokens;
-	(void)list_env;
-	while (environ[i] != NULL)
+	if (tokens[1] != NULL)
 	{
-		_puts(environ[i]);
+		_puts("failed: command syntax");
+		return;
+	}
+	while (list_env != NULL)
+	{
+		_puts(list_env->path_name);
 		_putchar('\n');
-		i++;
+		list_env = list_env->next;
 	}
 }
 
