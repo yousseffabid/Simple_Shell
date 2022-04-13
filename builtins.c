@@ -12,7 +12,7 @@ void exit_program(char **tokens, path *list_env)
 
 	status = 0;
 	if (tokens[1] != NULL && tokens[2] != NULL)
-		_puts("failed: command synta");
+		_puts("failed: command syntax\n");
 	if (tokens[1] != NULL)
 		status = _atoi(tokens[1]);
 	free_list(list_env);
@@ -35,9 +35,11 @@ void _env(char **tokens, path *list_env)
 
 	if (tokens[1] != NULL)
 	{
-		_puts("failed: command syntax");
+		_puts("failed: command syntax\n");
 		return;
 	}
+	if (list_env == NULL)
+		return;
 	while (list_env != NULL)
 	{
 		_puts(list_env->path_name);
