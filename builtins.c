@@ -8,7 +8,15 @@
 
 void exit_program(char **tokens, path *list_env)
 {
-	exit(0);
+	int status;
+
+	status = 0;
+	if (tokens[1] != NULL)
+		status = _atoi(tokens[1]);
+	free_list(list_env);
+	free(tokens);
+	exit(status);
+
 }
 
 
