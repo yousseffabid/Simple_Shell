@@ -29,12 +29,16 @@ void exit_program(char **tokens, path *list_env)
 
 void _env(char **tokens, path *list_env)
 {
+	int i;
+
+	i = 0;
 	(void)tokens;
-	while (list_env != NULL)
+	(void)list_env;
+	while (environ[i] != NULL)
 	{
-		_puts(list_env->path_name);
+		_puts(environ[i]);
 		_putchar('\n');
-		list_env = list_env->next;
+		i++;
 	}
 }
 
