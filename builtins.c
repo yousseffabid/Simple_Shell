@@ -8,17 +8,7 @@
 
 void exit_program(char **tokens, path *list_env)
 {
-	int status;
-	(void)list_env;
-
-	status = 0;
-	if (_strcmp(tokens[0], "exit") == 1)
-	{
-		if (tokens[1] != NULL)
-			status = _atoi(tokens[1]);
-		exit(status);
-	}
-
+	exit(0);
 }
 
 
