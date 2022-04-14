@@ -46,6 +46,7 @@ void _env(char **tokens, path *list_env)
 		_putchar('\n');
 		list_env = list_env->next;
 	}
+	_puts("_=/usr/bin/env");
 }
 
 
