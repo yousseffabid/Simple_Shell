@@ -32,22 +32,19 @@ void exit_program(char **tokens, path *list_env)
 
 void _env(char **tokens, path *list_env)
 {
-	int i;
 
-	(void)list_env;
 	if (tokens[1] != NULL)
 	{
 		_puts("failed: command syntax\n");
 		return;
 	}
-	if (environ == NULL)
+	if (list_env == NULL)
 		return;
-	i = 0;
-	while (environ[i] != NULL)
+	while (list_env != NULL)
 	{
-		_puts(environ[i]);
+		_puts(list_env->path_name);
 		_putchar('\n');
-		i++;
+		list_env = list_env->next;
 	}
 }
 
