@@ -40,13 +40,13 @@ void _env(char **tokens, path *list_env)
 	}
 	if (list_env == NULL)
 		return;
-	set_dir("_", "/usr/bin/env", list_env);
 	while (list_env != NULL)
 	{
 		_puts(list_env->path_name);
 		_putchar('\n');
 		list_env = list_env->next;
 	}
+	_puts("_=/usr/bin/env");
 }
 
 
