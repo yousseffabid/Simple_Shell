@@ -17,12 +17,13 @@ char *check_path(char *string, char **parsed_path)
 	int i;
 
 	pathname = NULL;
+	tmp = NULL;
 	if (_strcmp(string, "./ls") == 1)
 		pathname = string;
 
 	else
 	{
-		if (string[0] == '/')
+		if (string[0] == '/' || string[0] == '.')
 		{
 			if (stat(string, &st) == 0)
 				pathname = string;
