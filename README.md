@@ -1,6 +1,7 @@
 # Simple shell
 
-This projec simulates a basic Unix Shell with its respective commands. It uses the POSIX API to implement many of the same functionalities of the first Ken Thompson's Shell.
+This project simulates a basic Unix Shell with its respective commands. It uses the POSIX API to implement many of the same functionalities of the first Ken Thompson's Shell.
+It is a project of the first semester at Holberton School.
 
 ## Documentation
 
@@ -26,10 +27,14 @@ After executing the program you will be able to try the following and more:
 ## Features
 
 - Iterractive and non interractive mode
-- Executing commands
+- Can handle commands with options and arguments
+- Exit built-in, it exits the shell with a status
+- Ctrl+C signal handeled: the shell will not quit when the user inputs ^C it quits when you type ^D.
 - Adding and removing environement varibles
+- Changing directory with the builtin command cd
+- If executable is not found, prints an error message and displays prompt again
 
- 
+
 ## Flowchart
 
 How our shell is working
