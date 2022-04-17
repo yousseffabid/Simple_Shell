@@ -30,7 +30,7 @@ After executing the program you will be able to try the following and more:
 - Can handle commands with options and arguments
 - Exit built-in, it exits the shell with a status
 - Ctrl+C signal handeled: the shell will not quit when the user inputs ^C it quits when you type ^D.
-- Adding and removing environement varibles
+- Adding and removing environement variables
 - Changing directory with the builtin command cd
 - If executable is not found, prints an error message and displays prompt again
 
